@@ -1,0 +1,24 @@
+.nav
+    $p: &
+    &-tabs
+        border: none
+        #{$p}-item
+            #{$p}-link
+                border-top-left-radius: 10px
+                border-top-right-radius: 10px
+                position: relative
+                min-height: 3.75rem
+                @extend %head-font
+                min-width: 11.25rem
+                font-size: 1.125rem
+                text-align: center
+                color: #888E92
+                &:hover
+                    border-color: transparent
+                &.active
+                    color: $primary-color
+                    border-color: $primary-color
+                    border-bottom: 1px solid transparent
+                    &:hover
+                        border-color: $primary-color
+                        border-bottom: 1px solid transparent

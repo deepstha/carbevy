@@ -28,7 +28,7 @@ label
 input
     font-size: 1rem
     max-height: 2rem
-    +border-radius(5px)
+    +border-radius(10px !important)
     padding: .9375rem
     border: none
     min-height: 3rem
@@ -50,6 +50,9 @@ input
             &__number
                 width: 50px
                 text-align: center
+button, input
+    +border-radius(10px !important)
+    min-height: 3.75rem
 //iframe
 iframe
     width: 100%
@@ -91,6 +94,10 @@ dl
 
 //anchor
 a
+    &:hover
+        color: rgba($primary-color, 0.9) !important
+        text-decoration: none
+
     &:focus
         text-decoration: none
         color: $primary-color

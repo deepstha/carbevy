@@ -1,10 +1,49 @@
 .banner
-    &-panel
-        max-width: 37.8125rem
-        margin-top: 3.4375rem
-    .carousel
-        &-item
-            h2
-                span
-                    display: block
-                    color: #656565
+    $p: &
+    &__panel
+        background-image: url('/assests/images/banner-bg.png')
+        background-repeat: no-repeat
+        background-position: right bottom
+        margin-top: -84px
+        padding-top: 125px
+        min-height: 705px
+        position: relative
+        z-index: 1
+        +laptop
+            background-position: right
+        +fullhd
+            background-position: 90%
+        +quadhd
+            background-position: 85%
+        #{$p}__content
+            width: 60%
+            margin: 0 27%
+            +desktop
+                width: 37.8125rem
+                margin-top: 3.4375rem
+
+        .carousel
+            &-item
+                background-color: #FAF7F6
+                h2
+                    & +
+                        span
+                            color: #656565
+        
+        #{$p}__img
+            max-width: 50%
+            +media-breakpoint-up(xl)
+                max-width: 50%
+            +media-breakpoint-up(xxl)
+                max-width: 690px
+            .carousel
+                &-item
+                    background-color: transparent
+                    text-align: center
+        .section
+            &-video
+                button
+                    +box-shadow(none)
+                    border: none
+                    background: transparent
+
