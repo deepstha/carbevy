@@ -1,0 +1,66 @@
+// For Responsive
+$mobile-sm: 481px !default
+$tablet: 768px !default
+$desktop-mini: 992px !default
+$desktop: 1024px !default
+$laptop: 1200px !default
+$fullhd: 1441px !default
+$quadhd: 1600px !default
+$ultrahd: 1800px !default
+
+=mobile
+  @media screen and (max-width: $tablet - 1px)
+    @content
+
+=mobile-sm
+  @media screen and (min-width: $mobile-sm), print
+    @content
+    
+=mobile-sm-max
+  @media screen and (max-width: $mobile-sm - 1px)
+    @content
+
+=tablet
+  @media screen and (min-width: $tablet), print
+    @content
+
+=tablet-max
+  @media screen and (max-width: $desktop-mini - 1px)
+    @content
+
+=tablet-only
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px)
+    @content
+
+=desktop-mini
+  @media screen and (min-width: $desktop-mini), print
+    @content
+
+=desktop
+  @media screen and (min-width: $desktop - 1px)
+    @content
+
+=laptop
+  @media screen and (min-width: $laptop - 1px)
+    @content
+
+=laptop-max
+  @media screen and (max-width: $laptop - 1px)
+    @content
+
+=desktop-only
+  @media screen and (min-width: $desktop) and (max-width: $fullhd - 1px)
+    @content
+
+=fullhd
+  @media screen and (min-width: $fullhd)
+    @content
+
+=quadhd
+  @media screen and (min-width: $quadhd)
+    @content
+
+=ultrahd
+  @media screen and (min-width: $ultrahd)
+    @content
+

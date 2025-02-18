@@ -1,0 +1,27 @@
+// Vendors
+@import './vendors/bootstrap'
+
+// base
+@import './base/base'
+
+// components
+@import './components/buttons'
+
+// layout
+@import './layout/header'
+@import './layout/navbar'
+@import './layout/banner'
+
+body, html
+    color: black
+    font-size: 13px
+    font-weight: 400
+    scroll-behavior: smooth    
+    line-height: 1.5
+    -ms-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%
+    -webkit-font-smoothing: antialiased
+    background-color: $white-color
+    @extend %body-font
+    +tablet
+        font-size: 14px

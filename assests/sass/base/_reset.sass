@@ -1,0 +1,98 @@
+// Image
+img
+    max-width: 100%
+    height: auto
+    image-rendering: -webkit-optimize-contrast
+
+
+//paragraph
+p
+    margin-bottom: 1.7rem
+    small
+        font-size: 0.68em
+small
+    font-size: 0.5em
+    // font-family: 'Montserrat', sans-serif
+    margin-bottom: 3px
+    +desktop
+        font-size: 0.45em
+
+blockquote
+    font-style: italic
+//label                
+label
+    line-height: 1.25rem
+    font-size: 0.875rem
+
+//input
+input
+    font-size: 1rem
+    max-height: 2rem
+    +border-radius(5px)
+    padding: .9375rem
+    border: none
+    min-height: 3rem
+    +box-shadow(none)
+    +border-radius(.5rem)
+    +placeholder-color($input-color)
+    &[type=search]
+        -webkit-appearance: none
+        appearance: none
+
+    &:focus
+        border: none
+        outline: none
+    &.input
+        &-blank
+            background-color: transparent
+            border: none
+            padding: 2px
+            &__number
+                width: 50px
+                text-align: center
+//iframe
+iframe
+    width: 100%
+    max-width: 100%
+
+//table
+table
+    width: 100%
+    tr,td, th
+        padding: 5px 10px
+    p
+        margin-bottom: 0
+    .td
+        &-min
+            &-w
+                min-width: 60px
+                display: inline-block
+    td
+        &.text
+            &-right
+                min-width: 100%
+//button
+.btn, button
+    &:focus
+        outline: none !important
+
+//listing 
+ul
+    li 
+        list-style: none
+    &.list-disc
+        li
+            list-style: disc
+        
+
+dl
+    dt
+        margin-bottom: 0.5rem
+
+//anchor
+a
+    &:focus
+        text-decoration: none
+        color: $primary-color
+        outline: 0
+
