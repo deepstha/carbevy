@@ -2,27 +2,51 @@ h1,h2,h3,h4,h5,h6
     @extend %head-font
 
 h2
-    line-height: 1.2
+    line-height: 1.3
     font-size: 3.5rem //56px
+    +media-breakpoint-up(xl)
+        font-size: 56px
 h3
     font-size: 1.875rem //30px
+    +media-breakpoint-up(xl)
+        font-size: 30px
 h4
     line-height: 1.44
     font-size: 1.25rem //20px
+    +media-breakpoint-up(xl)
+        font-size: 20px
 
 
 .text
     &-4
         line-height: 1.44
         font-size: 1.25rem //20px
+        +media-breakpoint-up(xl)
+            font-size: 20px
     &-5
         font-size: 1.125rem //18px
+    &-6
+        font-size: 1rem //16px
+        +media-breakpoint-up(xl)
+            font-size: 16px
     &-sm
         font-size: .875rem //14px
     &-grey
         color: #ccc
+    &-black
+        color: #000
     &-primary
         color: $primary-color !important
+        &:hover, &:focus
+            color: rgba($primary-color, 0.9) !important
+            
+    &-underline
+        text-decoration: underline
+    &-link
+        @extend .text-underline
+        &:hover
+            text-decoration: none
+        
 
 .body-font
     @extend %body-font

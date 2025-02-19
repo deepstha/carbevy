@@ -22,3 +22,16 @@
                     &:hover
                         border-color: $primary-color
                         border-bottom: 1px solid transparent
+                &:not(.active)
+                    &::after
+                        content: ""
+                        position: absolute
+                        background: rgba(255, 255, 255, 0.73)
+                        height: 98%
+                        width: 100%
+                        left: 0px
+                        top: 0
+                        z-index: -1
+                        border-top-left-radius: .625rem
+                        border-top-right-radius: .625rem
+                    

@@ -4,6 +4,7 @@ $tablet: 768px !default
 $desktop-mini: 992px !default
 $desktop: 1024px !default
 $laptop: 1200px !default
+$laptop-mc: 1367px !default
 $fullhd: 1441px !default
 $quadhd: 1600px !default
 $ultrahd: 1800px !default
@@ -24,18 +25,6 @@ $ultrahd: 1800px !default
   @media screen and (min-width: $tablet), print
     @content
 
-=tablet-max
-  @media screen and (max-width: $desktop-mini - 1px)
-    @content
-
-=tablet-only
-  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px)
-    @content
-
-=desktop-mini
-  @media screen and (min-width: $desktop-mini), print
-    @content
-
 =desktop
   @media screen and (min-width: $desktop - 1px)
     @content
@@ -44,12 +33,8 @@ $ultrahd: 1800px !default
   @media screen and (min-width: $laptop - 1px)
     @content
 
-=laptop-max
-  @media screen and (max-width: $laptop - 1px)
-    @content
-
-=desktop-only
-  @media screen and (min-width: $desktop) and (max-width: $fullhd - 1px)
+=mac
+  @media screen and (min-width: $laptop-mc)
     @content
 
 =fullhd

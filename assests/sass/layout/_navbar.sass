@@ -1,16 +1,44 @@
 .navbar
-    margin-top: 35px
+    .nav
+        &-link
+            @extend %body-font
+            font-size: 14px
+            color: #444444
+            padding: 1.5rem 1rem
+            .navbar-light &
+                color: #444444
+            +desktop
+                padding: 0.5rem 1rem
+            &.dropdown-toggle
+                +justify-content(space-between)
+                +display-flex
+                +desktop
+                    justify-content: left
+                span
+                    margin-left: .25rem
+    &-light
+        .navbar
+            &-toggler
+                border: none
     .menu
         &-list
             .nav
                 &-item
                     &:not(:last-child)
-                        margin-right: 3.9375rem
+                        border-bottom: 1px solid #ededed
+                        +desktop
+                            border: none
+                            margin-right: 3.9375rem
                             
             .btn
                 &-section
-                    margin-left: 8.75rem
+                    margin-left: 0
+                    +desktop
+                        margin-left: 8.75rem
                     .btn
                         +border-radius(10px)
                         min-width: 6.4375rem
-                        min-height: 2.5rem
+                        min-height: 3.125rem
+                        +desktop
+                            min-height: 40px
+

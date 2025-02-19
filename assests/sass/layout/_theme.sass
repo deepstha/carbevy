@@ -5,12 +5,25 @@
             content: ""
             position: absolute
             height: 588px
-            width: 96.8%
+            width: 100%
             background: #FAF7F6
-            top: 50px
+            top: 0
             z-index: 0
-            +fullhd
+            +transition(all 0.3s linear)
+            +desktop
+                width: 100%
+                top: 50px
+            +mac
                 width: 1389px
+            +fullhd
+                width: 95%
+            +quadhd
+                width: 90%
+        &.hide
+            &::after
+                top: 0
+                +desktop
+                    top: 22px
 .container
     @include media-breakpoint-up(xl)
         max-width: 1256px

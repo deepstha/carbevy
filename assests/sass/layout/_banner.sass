@@ -4,23 +4,33 @@
         background-image: url('/assests/images/banner-bg.png')
         background-repeat: no-repeat
         background-position: right bottom
-        margin-top: -84px
-        padding-top: 125px
-        min-height: 705px
+        margin-top: -72px
+        padding-top: 138px
+        min-height: 687px
         position: relative
         z-index: 1
+        margin-bottom: 3.125rem
+        +mobile
+            background-image: none
         +laptop
             background-position: right
+            margin-bottom: 95px
         +fullhd
-            background-position: 90%
+            background-position: 95%
         +quadhd
-            background-position: 85%
+            background-position: 88%
         #{$p}__content
             width: 60%
-            margin: 0 27%
+            margin: 0
+            width: 100%
+            +tablet
+                width: 37.8125rem
+                margin: 0 27%
             +desktop
                 width: 37.8125rem
-                margin-top: 3.4375rem
+                margin: 3.4375rem 0 0
+            +laptop
+                width: 605px
 
         .carousel
             &-item
@@ -42,6 +52,7 @@
                     text-align: center
         .section
             &-video
+                margin-top: 2.1875rem
                 button
                     +box-shadow(none)
                     border: none

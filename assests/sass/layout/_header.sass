@@ -5,10 +5,20 @@
         color: $white-color
         height: 2.75rem
         background-color: $black-color
+        margin-bottom: 0
+        top: 0
+        position: relative
+        +transition(all 0.3s linear)
+        +media-breakpoint-up(xl)
+            margin-bottom: 25px
+        &.hide
+            height: 0
+            top: -44px
         .btn
             &-close
                 background-color: transparent
                 +box-shadow(none)
+                min-height: auto
                 border: none
                 top: 5px
                 right: 20px
