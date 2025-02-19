@@ -22,6 +22,5 @@ btnClose.addEventListener('click', function(){
   let themeContainer = document.querySelector('.theme-container');
   headerTop.classList.add('hide');
   themeContainer.classList.add('hide');
-  console.log('hide')
 
 })
