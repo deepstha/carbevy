@@ -24,3 +24,12 @@ btnClose.addEventListener('click', function(){
   themeContainer.classList.add('hide');
 
 })
+
+//Add Sticky on header
+window.addEventListener("scroll", function(){
+  var e = this.scrollY;
+  const  header = this.document.querySelector('.header');
+  if(e>1){
+    header.classList.add('sticky')
+  } else header.classList.remove('sticky')
+})

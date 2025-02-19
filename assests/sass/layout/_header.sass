@@ -1,6 +1,12 @@
 .header
-    position: relative
+    position: fixed
+    width: 100%
     z-index: 2
+    top: 0
+    &.sticky
+        background-color: $white-color
+    +desktop
+        position: relative
     &-top
         color: $white-color
         height: 2.75rem
@@ -21,4 +27,6 @@
                 min-height: auto
                 border: none
                 top: 5px
-                right: 20px
+                right: 1.25rem
+                +mobile
+                    right: .1875rem
